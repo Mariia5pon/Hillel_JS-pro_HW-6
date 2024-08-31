@@ -1,4 +1,5 @@
 // Task 1
+
 function removeCharacterArray() {
     function removeCharacters(str, charsToRemove) {
         let result = '';
@@ -23,6 +24,7 @@ function removeCharacterArray() {
 }
 
 // Task 2
+
 function calculateAverage(arr) {
     let sum = 0;
     let count = 0;
@@ -38,10 +40,29 @@ function calculateAverage(arr) {
 
 let mixedArray = [1, 'hello', 3, true, 5, '564899', null, 2.5];
 let average = calculateAverage(mixedArray);
-console.log(average);
+console.log(`Task 2: ${average}.`);
 
 function logToConsole() {
     alert('Натисніть F12.');
 }
 
 //Task 3
+
+function getResultOfTask3() {
+    function removeElement(array, item) {
+        let newArr = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] !== item) {
+                newArr.push(array[i]);
+            }
+        }
+        return newArr;
+    }
+
+    const inputString = prompt("Введіть масив через кому:");
+    const elementToRemove = parseInt(prompt("Введіть елемент для видалення:"));
+    const inputArray = inputString.split(',').map(Number);
+
+    const result3 = removeElement(inputArray, elementToRemove);
+    document.getElementById('task-3_result').innerHTML = result3.join(', ');
+}
