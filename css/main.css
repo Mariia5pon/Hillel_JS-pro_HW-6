@@ -80,6 +80,7 @@ header {
     position: relative;
     letter-spacing: 0.4px;
     border-radius: var(--border-btn);
+    margin: 10px 0;
 }
 
 h1 {
